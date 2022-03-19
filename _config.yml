@@ -91,7 +91,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: webpribadi # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # -----------------------------------------------------------------------------
@@ -252,6 +252,10 @@ imagemagick:
 # -----------------------------------------------------------------------------
 
 jekyll-diagrams:
+  graphviz:
+  blockdiag:
+   syntrax:
+
     # configuration, see https://github.com/zhustec/jekyll-diagrams.
     # feel free to comment out this section if not using jekyll diagrams.
 
