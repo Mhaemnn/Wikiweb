@@ -122,6 +122,7 @@ blockquote {
 // Navbar customization
 
 .navbar {
+  text-transform: capitalize;
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
@@ -267,6 +268,7 @@ footer.fixed-bottom {
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
+    text-align: center;
   }
   a {
     color: var(--global-footer-link-color);
