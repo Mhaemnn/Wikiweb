@@ -13,7 +13,7 @@ profile:
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 Saya seorang Mahasiswa Teknik Informatika (Desember 2020) dari <a href="https://widyagama.ac.id/">Universitas Widyagama Malang</a>
 saya sangat seneng mengembangkan solusi untuk masalah yang menantang mulai penerapan dan pengujian kode yang terkdokumentasi yang baik dan dapat diproduksi. <br><br>
