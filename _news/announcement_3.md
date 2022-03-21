@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Algoritma KMP (Knuth-Morris-Pratt)
+title: Algoritma KMP Knuth-Morris-Pratt
 date:  2022-03-20 07:59:00-0400
 inline: false
 ---
