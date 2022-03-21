@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Algoritma Merge Sort Python
-date: 2022-03-19 16:40:00-0400
+date:  2020-03-11 16:40:00-0900
 img: assets/img/merge_sort.gif
 inline: false
 ---

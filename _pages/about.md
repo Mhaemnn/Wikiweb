@@ -15,6 +15,7 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
+
 Saya seorang Mahasiswa Teknik Informatika (Desember 2020) dari <a href="https://widyagama.ac.id/">Universitas Widyagama Malang</a>
 saya sangat seneng mengembangkan solusi untuk masalah yang menantang mulai penerapan dan pengujian kode yang terkdokumentasi yang baik dan dapat diproduksi. <br><br>
 Keseharian saya selain jadi mahasiswa saya juga seorang karyawan di <a href="https://www.ptpp.co.id/">PT.PP (Persero) Tbk</a> saya telah berkonstribusi pada pembangunan Tempat Pemrosesan Akhir <a href="">(TPA)</a>
