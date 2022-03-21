@@ -1,56 +1,58 @@
 ---
 layout: post
-title:  Algortima Mega Sort
-date:   2015-03-15 16:40:16
+title:  Algortima Mega Sort Python
+date:   2022-03-19 16:40:16
 description: Materi sem II Dosen pak Ismail
+img: assets/img/merge_sort.gif
 tags: formatting links
 categories: sample-posts
 ---
 ***
+##### Pengertian
 `Mega sort` merupakan algoritma pengurutan dalam [Ilmu Komputer](https://id.wikipedia.org/wiki/Ilmu_komputer) yang di rancang untuk memenuhi kebutuhan pengurutan atas suatu rangkaian data yang tidak memungkinkan untuk di tampung dalam memory komputer karena jumlahnya terlalu besar. Alogitma ini ditemukan oleh [Jhon Von Neumann](https://id.wikipedia.org/wiki/Arsitektur_von_Neumann#:~:text=John%20Van%20Neumann%20seorang%20ahli,Inggris%3A%20stored%20program%20concept) pada tahun 1945. <br> <br>
-[Mega sort](/assets/img/Merge-sort-example-300px.gif)
 
-
-
-
-
+##### Algoritma 
+Perinsip utama yang diimplementasikan pada algoritma `Merge sort` sering kali disebut sebagai *Divide and Conquer*. Cara kerja algoritam `Merge sort` adalah membagi [larik](https://id.wikipedia.org/wiki/Larik) yang diberikan menjadi dua bagian yang lebih kecil, kedua larik tersebut akan diurutkan secara terpisah. Setelah kedua buah list tersusun, makan akan dibentuk larik baru sebagai hasil penggabungan dari dua buah larik sebelumnya. Menurut keefektifanya, algoritma ini bekarja dengan tingkat keefektifan [O](https://id.wikipedia.org/wiki/Notasi_O_besar)(nlog(n)). Dalam bentuk pseudocode sederhana algoritam ini dijabarkan sebagia berikut:
 ```python
-#Fungsi berikut mengurutkan bilangan pada list menggunakan algoritma merge sort
+# Original data is on the input tape; the other tapes are blank
+ function merge_sort(input_tape, output_tape, scratch_tape_C, scratch_tape_D)
+     while any records remain on the input_tape
+         while any records remain on the input_tape
+             merge( input_tape, output_tape, scratch_tape_C)
+             merge( input_tape, output_tape, scratch_tape_D)
+         while any records remain on C or D
+             merge( scratch_tape_C, scratch_tape_D, output_tape)
+             merge( scratch_tape_C, scratch_tape_D, input_tape)
 
-def merge_sort(list_bilangan):
-  jumlah_bilangan =  len(list_bilangan)
-  if jumlah_bilangan > 1:
-    posisi_tengah = len(list_bilangan)//2
-    potongan_kiri = list_bilangan[:posisi_tengah]
-    potongan_kanan = list_bilangan[posisi_tengah:]
-    
-    merge_sort(potongan_kiri)
-    merge_sort(potongan_kanan)
-
-    jumlah_bilangan_kiri = len(potongan_kiri)
-    jumlah_bilangan_kanan = len(potongan_kanan)
-    c_all,c_kiri,c_kanan = 0,0,0 # pencacah/counter
-    print('Sebelum merge:',list_bilangan)  
-    print('Potongan sebelum merge:',potongan_kiri,':',potongan_kanan)
-    while c_kiri < jumlah_bilangan_kiri or c_kanan < jumlah_bilangan_kanan:
-      if c_kiri == jumlah_bilangan_kiri: # elemen di potongan kiri habis
-        list_bilangan[c_all] = potongan_kanan[c_kanan]
-        c_kanan = c_kanan + 1
-      elif c_kanan == jumlah_bilangan_kanan: # elemen di potongan kanan habis
-        list_bilangan[c_all] = potongan_kiri[c_kiri]
-        c_kiri = c_kiri + 1
-      elif potongan_kiri[c_kiri] <= potongan_kanan[c_kanan]: # nilai elemen di potongan kiri lebih kecil
-        list_bilangan[c_all] = potongan_kiri[c_kiri]
-        c_kiri = c_kiri + 1
-      else: # nilai elemen di potongan kanan lebih besar
-        list_bilangan[c_all] = potongan_kanan[c_kanan]
-        c_kanan = c_kanan + 1
-      c_all = c_all + 1
-    print('Setelah merge:', list_bilangan)
-    print()
-          
-angka = [6,5,3,1,8,7,2,4]
-print('Sebelum sort:',angka)
-merge_sort(angka)
-print('Setelah sort:',angka)
+ # take the next sorted chunk from the input tapes, and merge into the single given output_tape.
+ # tapes are scanned linearly.
+ # tape[next] gives the record currently under the read head of that tape.
+ # tape[current] gives the record previously under the read head of that tape.
+ # (Generally both tape[current] and tape[previous] are buffered in RAM ...)
+ function merge(left[], right[], output_tape[])
+     do
+        if left[current] ≤ right[current]
+            append left[current] to output_tape
+            read next record from left tape
+        else
+            append right[current] to output_tape
+            read next record from right tape
+    while left[current] < left[next] and right[current] < right[next]
+    if left[current] < left[next]
+        append current_left_record to output_tape
+    if right[current] < right[next]
+        append current_right_record to output_tape
+    return
 ```
+
+Contoh penerapan atas sebuah larik sebagai data sumber yang akan diturunkan ***{3,9,4,1,5,2}*** adalah sebagai berikut:
+* Larik tersebuh dibagi menjadi dua bagian,***{3,9,4}*** dan ***{1,5,2}***
+* Kedua lirik kemudian diurutakan secara terpisah sehingga menjadi ***{3,9,4}*** dan ***{1,5,2}***
+* Sebuah lirik baru dibentuk sebagai penggabung dari kedua lirik tersebut ***{1}***, sementara nilai-nilai dalam masing larik ***{3,4,9}*** dan ***{2,5}*** (nilai `1` dalam elemen larik kedua telah dipindahkan ke larik baru)
+* Langkah berikutnya adalah penggabungan dari masing-masing larik ke dalam larik baru yang dibuat sebelumnya.
+  * ***{1, 2}*** <-> ***{3, 4, 9}*** dan ***{5}***
+  * ***{1, 2, 3}*** <-> ***{4, 9}*** dan ***{5}***
+  * ***{1, 2, 3, 4}*** <-> ***{9}*** dan ***{5}***
+  * ***{1, 2, 3, 4, 5}*** <-> ***{9}*** dan ***{null}***
+  * ***{1, 2, 3, 4, 5, 9}*** <-> ***{null}*** dan ***{null}***
+
