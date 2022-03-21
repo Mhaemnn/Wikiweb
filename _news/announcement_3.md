@@ -2,7 +2,7 @@
 layout: post
 title: Algoritma KMP Knuth-Morris-Pratt
 date:  2022-03-20 07:59:00-0400
-redirect: ../_posts/2022-03-20-news.md
+redirect: 
 inline: false
 ---
 

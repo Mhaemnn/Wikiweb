@@ -2,7 +2,6 @@
 layout: post
 title: Algoritma Merge Sort Python
 date:  2020-03-11 16:40:00-0900
-img: assets/img/merge_sort.gif
 inline: false
 ---
 
@@ -53,6 +52,3 @@ Contoh penerapan atas sebuah larik sebagai data sumber yang akan diturunkan ***{
   * ***{1, 2, 3, 4}*** <-> ***{9}*** dan ***{5}***
   * ***{1, 2, 3, 4, 5}*** <-> ***{9}*** dan ***{null}***
   * ***{1, 2, 3, 4, 5, 9}*** <-> ***{null}*** dan ***{null}***
-
-
-

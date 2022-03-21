@@ -9,7 +9,7 @@ last_name: Iskandar
 email: ismuhaimin1@gamil.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   website, portfolio, blog, akademi, jekyll, jekyll-theme
-footer_text: >
+footer_text: 
 
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
@@ -244,6 +244,7 @@ imagemagick:
     - ".jpeg"
     - ".png"
     - ".tiff"
+    
   output_formats:
     webp: "-quality 75%"
 
