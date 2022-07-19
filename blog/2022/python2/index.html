@@ -2,16 +2,16 @@
 <html lang="en">
 
   <!-- Head -->
-  <head><meta http-equiv="refresh" content="3; url=https://alshedivat.github.io/Wikiweb/" />    <!-- Metadata, OpenGraph and Schema.org -->
+  <head>    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Muhaemin   | Page not found</title>
+    <title>Muhaemin   | Instalasi Python dan vscode di linux ubuntu</title>
     <meta name="author" content="Muhaemin  " />
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here." />
+    <meta name="description" content="Pyhton dasar" />
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
 
 
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
     
     <link rel="stylesheet" href="/Wikiweb/assets/css/main.css">
-    <link rel="canonical" href="https://alshedivat.github.io/Wikiweb/404.html">
+    <link rel="canonical" href="https://alshedivat.github.io/Wikiweb/blog/2022/python2/">
     
     <!-- Dark Mode -->
     
@@ -71,7 +71,7 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
+              <li class="nav-item active">
                 <a class="nav-link" href="/Wikiweb/blog/">blog</a>
               </li>
 
@@ -109,21 +109,84 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- page.html -->
-        <div class="post">
+      <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
-          </header>
+<div class="post">
 
-          <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://alshedivat.github.io/Wikiweb/">here</a>.</p>
+  <header class="post-header">
+    <h1 class="post-title">Instalasi Python dan vscode di linux ubuntu</h1>
+    <p class="post-meta">February 10, 2022</p>
+    <p class="post-tags">
+      <a href="/Wikiweb/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022
+      </a>
+        ·  
+      <a href="/Wikiweb/blog/tag/formatting">
+        <i class="fas fa-hashtag fa-sm"></i> formatting</a>  
+      <a href="/Wikiweb/blog/tag/links">
+        <i class="fas fa-hashtag fa-sm"></i> links</a>  
+      
+        ·  
+      <a href="/Wikiweb/blog/category/Python">
+        <i class="fas fa-tag fa-sm"></i> Python</a>  
+      
 
-          </article>
+    </p>
+  </header>
+
+  <article class="post-content">
+    <hr>
+
+<p><code class="language-plaintext highlighter-rouge">vscode</code> adalah text editor penyunting kode sumber buatan <a href="https://www.microsoft.com/id-id" target="_blank" rel="noopener noreferrer">Microsoft</a> untuk Linux, MacOS, dan Windows. Dalam tutorial ini
+saya menggunakan Python3 untuk menampilkan <code class="language-plaintext highlighter-rouge">Hello World!</code> yang paling sederhana yaitu menggunakan ektensi python <code class="language-plaintext highlighter-rouge">.py</code> dan di tutorial ini juga akan menjadikan vscode lakayknya<a href="https://id.wikipedia.org/wiki/Lingkungan_pengembangan_terpadu#:~:text=IDE%20(Integrated%20Development%20Environment)%20adalah,diperlukan%20dalam%20membangun%20perangkat%20lunak." target="_blank" rel="noopener noreferrer"><code class="language-plaintext highlighter-rouge">IDE</code></a> Python yang ringan dan power full</p>
+
+<h4 id="instalasi-python">Instalasi Python</h4>
+
+<ul>
+  <li>
+    Jika anda belum mempunyai Python disarankan untuk mendownload terlebih dahulu. Lalu pilih sesuai dengan <i>System operasi</i> yang ada gunakan di sini saya menggunakan linux tapi biasa nya kalau menggunakan system operasi 
+    linux untuk python nya sudah di sertakan tapi kalau anda mau menggunakan versi terbarunya anda bisa mengunjungi dari situm resminya
+  </li>
+    <div class="row mt-3">
+        <div class="col-sm mt-3 mt-md-0">
+            <figure>
+
+  <picture>
+    <source media="(max-width: 480px)" srcset="/Wikiweb/assets/img/python_download-480.webp"></source>
+    <source media="(max-width: 800px)" srcset="/Wikiweb/assets/img/python_download-800.webp"></source>
+    <source media="(max-width: 1400px)" srcset="/Wikiweb/assets/img/python_download-1400.webp"></source>
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/Wikiweb/assets/img/python_download.png">
+
+  </picture>
+
+</figure>
 
         </div>
+    </div>
+</ul>
 
+<h4 id="instalasi-vscode-melalui-repository">Instalasi vscode melalui repository</h4>
+
+<p>Menambahakan repository resmi dari vscode dan sebelum melakukan instalasi, tambahkan repository dengan menggunakan printah:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt<span class="p">-</span><span class="nb">get</span> <span class="k">update</span>
+sudo apt install software<span class="p">-</span>properties<span class="p">-</span>common apt<span class="p">-</span>transport<span class="p">-</span>https wget
+</code></pre></div></div>
+
+<p>Lakukan printah dibawah ini untuk menambahkan repository vscode dari <code class="language-plaintext highlighter-rouge">Microsoft</code> ke linux ubuntu</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="p">-</span><span class="k">q</span> https<span class="p">:</span><span class="sr">//</span>packages<span class="p">.</span>microsoft<span class="p">.</span><span class="k">com</span><span class="sr">/keys/</span>microsoft<span class="p">.</span>asc <span class="p">-</span>O<span class="p">-</span> <span class="p">|</span> sudo apt<span class="p">-</span><span class="nb">key</span> <span class="nb">add</span> <span class="p">-</span>
+sudo <span class="nb">add</span><span class="p">-</span>apt<span class="p">-</span>repository <span class="s2">"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"</span>
+</code></pre></div></div>
+
+<p>berikut nya jalankan printah untuk menginstall vscode di system operasi linux ubuntu anda</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install code
+</code></pre></div></div>
+
+  </article>
+
+</div>
     </div>
 
     <!-- Footer -->    
